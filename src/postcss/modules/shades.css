@@ -1,0 +1,16 @@
+.shades__container {
+	lost-utility: clearfix;
+	
+	background-color: #ffffff;
+}
+
+	.shades__item {
+		lost-column: 1/5;
+		height: 120px;
+	}
+
+	@for $i from 1 to 50 {
+		.shades__item--$(i) {
+			background-color: color(#000 l(calc($(i)*2)%));
+		}
+	}
