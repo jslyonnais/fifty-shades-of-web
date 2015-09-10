@@ -40,7 +40,7 @@
 <body>
 
     <h1 class="title">Fifty Shades of <span class="title--highlight">Web</span></h1>
-    <div class="tagline">a PostCSS demonstration from <a href="https://github.com/jslyonnais" target="_blank" class="tagline__link" title="Awesome frontend developer">Jean-Simon Lyonnais</a></div>
+    <div class="tagline">a PostCSS demonstration by <a href="https://github.com/jslyonnais" target="_blank" class="tagline__link" title="Awesome frontend developer">Jean-Simon Lyonnais</a></div>
     <div class="shades__container">
         <div class="shades__item">
             <div class="shades__color shades__color--1">
@@ -395,7 +395,7 @@
     </div>
     
     <?php include_once('assets/images/svg/svg-sprites/svg.svg'); ?>
-    
+
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="./assets/js/min/scripts.min.js"></script>
 
