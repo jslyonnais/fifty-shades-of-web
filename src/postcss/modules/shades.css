@@ -8,14 +8,14 @@
 	.shades__item {
 		lost-column: 1;
 	}
-
-	@for $i from 1 to 50 {
-		.shades__color--$(i) {
+		.shades__color {
 			padding-bottom: 75%; /* 4:3 Ratio */
-
-			background-color: color(#000 l(calc($(i)*2)%));
 		}
-	}
+		@for $i from 1 to 50 {
+			.shades__color--$(i) {
+				background-color: color(#000 l(calc($(i)*2)%));
+			}
+		}
 
 	@media all and (width >= map(breakpoints, xlarge) ) {
 		.shades__item {
