@@ -24,32 +24,31 @@
     <meta name="twitter:url" content="http://fiftyshadesofweb.com" />
 
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-  
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-65578800-1', 'auto');
-      ga('send', 'pageview');
+    ga('create', 'UA-65578800-1', 'auto');
+    ga('send', 'pageview');
 
-    </script>
+</script>
 
 </head>
 <body>
 
-    
-
     <h1 class="title">Fifty Shades of <span class="title--highlight">Web</span></h1>
     <div class="tagline">a PostCSS demonstration by <a href="https://github.com/jslyonnais" target="_blank" class="tagline__link" title="Awesome frontend developer">Jean-Simon Lyonnais</a></div>
+    
     <div class="shades__container">
         <?php foreach (range(1, 50) as $number) { ?>
             <div class="shades__item">
                 <div class="shades__color shades__color--<?php echo $number ?>">
                     <svg class="shades__icon">
                         <use xlink:href="#icon-color-palette"></use>
-                   </svg>
+                    </svg>
                 </div>
             </div>
         <?php } ?>
