@@ -18,6 +18,9 @@ module.exports = {
     colorLogoText            : '#222',
     colorLogoBackground      : '#fee620',
 
+    // Animation 
+    time                     : '250ms',
+
     /*******************************************************************************
     FONT SETTINGS
     *******************************************************************************/
@@ -32,6 +35,4 @@ module.exports = {
 
     /* Font stacks */
     fontFamilySans           : '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    fontFamilySerif          : '"bookmania", Cambria, Georgia, Times, "Times New Roman"',
-
 }

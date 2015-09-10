@@ -1,5 +1,8 @@
 'use strict';
 
+
+
+
 /*******************************************************************************
 DEPENDENCIES
 *******************************************************************************/
@@ -15,16 +18,9 @@ var gulp = require('gulp'),
 
     /* PERFORMANCE */
     psi = require('psi'),
-    site = 'http://postcss.dev/',
+    site = 'http://fifty.dev/',
     siteStage = '',
     key = '', // pagespeed key if used a lot better
-
-
-
-    /* ANALYSIS */
-    //listSelectorsPlugin = require('list-selectors'),
-    //cssstats = require('postcss-cssstats'),
-
 
 
     /* STYLES DEPENDENCIES */
@@ -33,6 +29,7 @@ var gulp = require('gulp'),
     postcssMixins = require('postcss-mixins'),
     postcssNested = require('postcss-nested'),
     sourcemaps = require('gulp-sourcemaps'),
+
 
     // post css
     lost = require('lost'),
@@ -43,20 +40,17 @@ var gulp = require('gulp'),
     postcssSize = require('postcss-size'),
     postcssBrandColors = require('postcss-brand-colors'),
     postcssColorFunction = require('postcss-color-function'),
-
     postcssSimpleVars = require('postcss-simple-vars'),
     map = require('postcss-map'),
     mediaMinmax = require('postcss-media-minmax'),
     postcssEasings = require('postcss-easings'),
     bemLinter = require('postcss-bem-linter'),
     postcssnot = require('postcss-selector-not'),
-
     postcssPalette = require('postcss-color-palette'),
-    // a better palette mrmrs(http://clrs.cc/) is used by default, you can use FlatUI or Material
     postcssFor = require('postcss-for'),
 
-
     cmq = require('gulp-combine-media-queries'),
+
 
     /* JS DEPENDENCIES */
     jshint = require('gulp-jshint'),
@@ -66,10 +60,8 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug'),
 
 
-
     /* IMAGES MINIFICATION DEPENDENCIES */
     imageOptim = require('gulp-imageoptim'),
-
 
 
     /* SVG SPRITES DEPENDENCIES */
@@ -79,10 +71,8 @@ var gulp = require('gulp'),
     cheerio = require('gulp-cheerio'),
 
 
-
     /* COOL TOOLS */
     Pageres = require('pageres');
-
 
 
 
@@ -138,27 +128,16 @@ var PALETTECOLOR = [
 var vars = require('./src/postcss/configs/sitesettings'),
     opts = {
         basePath: './src/postcss/configs/',
-        maps: [ 'colors.yml' ]
+        maps: [ 'colors.yml', 'breakpoints.yml' ]
     };
+
+
 
 
 
 /*******************************************************************************
 CSS TASKS
 *******************************************************************************/
-
-// custom tasks
-
-// var ratio = function (css, opts) {
-//     css.eachDecl(function(decl) {
-//         if (decl.prop === 'ratio') {
-//             decl.parent.insertAfter(decl, {
-//                 prop: 'content',
-//                 value: '""'
-//             });
-//         }
-//     });
-// };
 
 gulp.task('styles', function() {
         var processors = [
@@ -261,7 +240,6 @@ gulp.task('images', function() {
 
 
 
-
 /*******************************************************************************
 SVG TASKS
 *******************************************************************************/
@@ -292,6 +270,9 @@ ANALYSIS TASK
 *******************************************************************************/
 
 //@todo
+
+
+
 
 
 /*******************************************************************************
@@ -368,7 +349,7 @@ gulp.task('prod', ['styles','scriptsprod','svgstore', 'svgmin', 'shoot'], functi
 gulp.task('browser-sync', function() {
     browserSync({
         proxy: site,
-        tunnel: false // mettre a true si on veut un url accessible de l'extérieur
+        tunnel: false // Set "true" to activate tunnel trought the www
     });
 });
 

@@ -1,21 +1,8 @@
+/* LAYOUT : MAIN LAYOUT SETTING */
 html, body {
     background-color: map(colors, primary, dark);
     
     color: white;
     font-family: $fontFamilySans;
     font-weight: $fontWeightThin;
-}
-
-@for $i from 1 to 6 {
-    h$(i) {
-        font-weight: $fontWeightLight;
-    }
-}
-
-.title {
-	font-size: 2.5em;
-	
-	&--highlight {
-		font-weight: $fontWeightNormal;
-	}
 }

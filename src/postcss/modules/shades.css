@@ -1,3 +1,4 @@
+/* MODULE : SHADES */
 .shades__container {
 	lost-utility: clearfix;
 	
@@ -5,12 +6,29 @@
 }
 
 	.shades__item {
-		lost-column: 1/5;
-		height: 120px;
+		lost-column: 1;
 	}
 
 	@for $i from 1 to 50 {
-		.shades__item--$(i) {
+		.shades__color--$(i) {
+			padding-bottom: 75%; /* 4:3 Ratio */
+
 			background-color: color(#000 l(calc($(i)*2)%));
+		}
+	}
+
+	@media all and (width >= map(breakpoints, xlarge) ) {
+		.shades__item {
+			lost-column: 1/10;
+		}
+	}
+	@media all and (width >= map(breakpoints, large) ) {
+		.shades__item {
+			lost-column: 1/5;
+		}
+	}
+	@media all and (width >= map(breakpoints, medium) ) {
+		.shades__item {
+			lost-column: 1/2;
 		}
 	}
