@@ -1,12 +1,11 @@
 /* MODULE : SHADES */
 .shades__container {
 	lost-utility: clearfix;
-	
-	background-color: #ffffff;
 }
 
 	.shades__item {
 		lost-column: 1;
+		padding-bottom: 3px;
 	}
 		.shades__color {
 			position: relative;
@@ -79,5 +78,6 @@
 	@media all and (width >= map(breakpoints, medium) ) {
 		.shades__item {
 			lost-column: 1/2;
+			padding-bottom: 0;
 		}
 	}

@@ -532,7 +532,6 @@ body {
 
 .shades__container {
 	*zoom: 1;
-	background-color: #ffffff;
 }
 
 .shades__container:before {
@@ -548,6 +547,7 @@ body {
 
 .shades__item {
 	width: 100%;
+	padding-bottom: 3px;
 }
 
 .shades__item:nth-child(n) {
@@ -830,6 +830,7 @@ body {
 
 .shades__item {
 	width: 50%;
+	padding-bottom: 0;
 }
 
 .shades__item:nth-child(n) {
