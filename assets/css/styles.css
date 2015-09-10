@@ -789,8 +789,7 @@ body {
 	width: 50px;
 	height: 50px;
 	fill: #2196F3;
-	transition: top 250ms ease-in-out, 
-							opacity 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
 }
 
 .shades__description {
@@ -813,7 +812,9 @@ body {
 
 .js-open .shades__icon {
 	opacity: 1;
-	top: calc(50% - 60px);
+	width: 30px;
+	height: 30px;
+	top: calc(50% - 40px);
 	bottom: initial;
 }
 

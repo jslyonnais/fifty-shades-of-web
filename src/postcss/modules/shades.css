@@ -36,8 +36,7 @@
 				size: 50px;
 
 				fill: map(colors, accent, base);
-				transition: top $time ease-in-out, 
-							opacity $time ease-in-out;
+				transition: all $time ease-in-out;
 			}
 			.shades__description {
 				opacity: 0;
@@ -60,7 +59,9 @@
 				}
 				.shades__icon {
 					opacity: 1;
-					top: calc(50% - 60px);
+
+					size: 30px;
+					top: calc(50% - 40px);
 					bottom: initial;
 				}
 			}
