@@ -9,4 +9,9 @@ A PostCSS demonstration by Jean-Simon Lyonnais. Basic PostCSS config.
     - `xxlarge:'120.063em'`# min-width 1921px, xxlarge screens
   - Colors
   - Typos
+<<<<<<< HEAD
     - *To be released...*
+=======
+    - *To be released...*
+  
+>>>>>>> 8978545772c895df4cd247bd74f2953f35e9946f
