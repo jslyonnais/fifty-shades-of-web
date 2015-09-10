@@ -29,8 +29,14 @@
 
     	// Show elements on click
     	shadesElements.click(function() {
-    		shadesElements.removeClass('js-open');
-    		$(this).addClass('js-open');
+    		var jsOpen = 'js-open';
+
+    		if (!$(this).hasClass(jsOpen)) {
+    			shadesElements.removeClass(jsOpen);
+    			$(this).addClass(jsOpen);
+    		} else {
+    			$(this).removeClass(jsOpen);
+    		}
     	});
     }
 
